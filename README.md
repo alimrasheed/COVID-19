@@ -3,11 +3,6 @@ Detect Covid-19 with Chest X-Ray Data.
 
 ## INSTALLATION
 
-```
-
-pip install -r requirements.txt
-
-```
 
 ![github-small](first.png)
 
