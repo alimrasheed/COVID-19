@@ -23,11 +23,11 @@ labels = []
 
 imagePaths = [os.path.join(path, f) for f in os.listdir(path)]
 count = 0
-print("[INFO] loading images...")
+print("Loading the images")
 for imagePath in imagePaths:
     images = [os.path.join(imagePath, f) for f in os.listdir(imagePath)]
     for image in images:
-        labels.append(imagePath.split(os.path.sep)[-1])  # [-1] get the subfolder name and [-2] get the main folder name.
+        labels.append(imagePath.split(os.path.sep)[-1])  
         count += 1
         image = cv2.imread(image)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -103,5 +103,5 @@ plt.ylabel("Loss/Accuracy")
 plt.legend(loc="lower left")
 plt.savefig('model.png')
 
-model.save('models/COVID-19-model.h5', overwrite=True)
-print("[INFO] saving COVID-19 detector model...")
+model.save('models/model.h5', overwrite=True)
+print("saving the weights")
